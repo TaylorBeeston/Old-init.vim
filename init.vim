@@ -4,86 +4,15 @@ filetype off                  " required
 set shell=/bin/bash           " use bash, not fish or zsh
 syntax on                     " enable syntax highlighting
 
-" *** VUNDLE ***
-
-" You should run
-" git clone https://github.com/VundleVim/Vundle.vim.git
-" before using this
-
-" I am going to try and fully switch to VimPlug someday, but for now I am
-" using both
-
-" ~/.vim/bundle/Vundle.vim
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Build better habits, I don't really use this anymore =(
-" Plugin 'takac/vim-hardtime'
-
-" use :SCROLL to test color schemes
-Plugin 'https://github.com/vim-scripts/ScrollColors'
-
-" Show Indent Guides
-Plugin 'nathanaelkane/vim-indent-guides'
-
-" Code folding
-Plugin 'pseewald/vim-anyfold'
-" Try it out!
-" za: toggle folds at current line
-" zo: open fold
-" zc: close fold
-" zR: open all folds
-" zM: close all folds
-
-" Underline word under cursor
-Plugin 'itchyny/vim-cursorword'
-
-" Syntax checking/highlighting
-Plugin 'scrooloose/syntastic'
-Plugin 'justinmk/vim-syntax-extra'
-Plugin 'vim-python/python-syntax'
-Plugin 'othree/javascript-libraries-syntax.vim'
-
-" HTML
-Plugin 'mattn/emmet-vim'
-
-" CSS
-Plugin 'ap/vim-css-color' " Displays colors inline (#FFFFFF should appear as white)
-
-" Ruby on Rails plugin
-Plugin 'tpope/vim-rails'
-
-" Javascript
-Plugin 'maksimr/vim-jsbeautify' " use this with <c-f>
-
-" Code snippets plugin
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-" Plugin 'garbas/vim-snipmate'
-" Plugin 'honza/vim-snippets'
-Plugin 'isRuslan/vim-es6'
-
-" Toggle comments with gcc
-Plugin 'tomtom/tcomment_vim'
-
-" Work with surrounds e.g. cs"' will change double quotes to single quotes
-Plugin 'tpope/vim-surround'
-
-" Git Commands
-Plugin 'tpope/vim-fugitive'
-call vundle#end()
-
-" Vim-Plug - I hope to solely use this in the future
+" *** Vim-Plug  ***
 
 " Make sure to run
 " curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " prior to using
+"
 call plug#begin('~/.local/share/nvim/plugged')
+
 " This requires running
 " sudo npm -g install instant-markdown-d
 " prior to use
@@ -116,6 +45,60 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Build better habits, I don't really use this anymore =(
+" Plug 'takac/vim-hardtime'
+
+" use :SCROLL to test color schemes
+Plug 'https://github.com/vim-scripts/ScrollColors'
+
+" Show Indent Guides
+Plug 'nathanaelkane/vim-indent-guides'
+
+" Code folding
+Plug 'pseewald/vim-anyfold'
+" Try it out!
+" za: toggle folds at current line
+" zo: open fold
+" zc: close fold
+" zR: open all folds
+" zM: close all folds
+
+" Underline word under cursor
+Plug 'itchyny/vim-cursorword'
+
+" Syntax checking/highlighting
+Plug 'scrooloose/syntastic'
+Plug 'justinmk/vim-syntax-extra'
+Plug 'vim-python/python-syntax'
+Plug 'othree/javascript-libraries-syntax.vim'
+
+" HTML
+Plug 'mattn/emmet-vim'
+
+" CSS
+Plug 'ap/vim-css-color' " Displays colors inline (#FFFFFF should appear as white)
+
+" Ruby on Rails plugin
+Plug 'tpope/vim-rails'
+
+" Javascript
+Plug 'maksimr/vim-jsbeautify' " use this with <c-f>
+
+" Code snippets plugin
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+" Plug 'garbas/vim-snipmate'
+" Plug 'honza/vim-snippets'
+Plug 'isRuslan/vim-es6'
+
+" Toggle comments with gcc
+Plug 'tomtom/tcomment_vim'
+
+" Work with surrounds e.g. cs"' will change double quotes to single quotes
+Plug 'tpope/vim-surround'
+
+" Git Commands
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 filetype plugin indent on " required
